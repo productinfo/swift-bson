@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-  spec.name             = "SwiftBSON"
+  spec.name             = "libbson"
   spec.version          = "0.0.1"
   spec.summary          = "Swift bindings for libbson"
   spec.homepage         = "https://github.com/10gen/swift-bson"
