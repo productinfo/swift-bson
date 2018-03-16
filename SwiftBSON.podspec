@@ -15,6 +15,7 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
 
   spec.module_name = "libbson"
-  spec.preserve_paths = [ "module.modulemap", "libbson.h" ]
+  spec.source_files = "libbson.h"
   spec.module_map = "module.modulemap"
+  spec.preserve_paths = [ "module.modulemap", "libbson.h" ]
 end
