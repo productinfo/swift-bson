@@ -6,7 +6,8 @@ Pod::Spec.new do |spec|
   spec.license    = "Apache License 2.0"
   spec.author     = { "mbroadst" => "mbroadst@mongodb.com" }
   spec.platform   = :ios, "9.0"
-  spec.source       = {
+
+  spec.source     = {
     :git => "ssh://git@github.com/10gen/swift-bson.git",
     :branch => "master"
   }
@@ -14,6 +15,6 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
 
   spec.module_name = "libbson"
-  spec.preserve_path = "module.modulemap"
+  spec.preserve_paths = [ "module.modulemap", "libbson.h" ]
   spec.module_map = "module.modulemap"
 end
