@@ -13,9 +13,10 @@ Pod::Spec.new do |spec|
   }
 
   spec.requires_arc = true
-
-  spec.module_name = "libbson"
-  spec.source_files = "libbson.h"
-  spec.module_map = "module.modulemap"
   spec.preserve_paths = [ "module.modulemap", "libbson.h" ]
+  spec.pod_target_xcconfig = {
+    "SWIFT_INCLUDE_PATHS" => "$(PODS_TARGET_SRCROOT)",
+    "HEADER_SEARCH_PATHS" => "/usr/local/Cellar/mongo-c-driver/1.9.2/include/libbson-1.0",
+    "LIBRARY_SEARCH_PATHS" => "/usr/local/lib"
+  }
 end
